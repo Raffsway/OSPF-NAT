@@ -4,8 +4,8 @@
 
 Neste projeto, configurei uma topologia de rede para testar a conectividade e o acesso a recursos externos. A topologia inclui:
 
-- **Roteadores e Switches:** Configurados para permitir a comunicação entre dispositivos na rede local e a conexão com a Internet.
-- **Dispositivos Finais:** PCs ou servidores configurados para realizar testes de conectividade e resolução de nomes de domínio.
+- **Roteadores e Switches (CISCO):** Configurados para permitir a comunicação entre dispositivos na rede local e a conexão com a Internet.
+- **Dispositivos Finais:** PC configurado para realizar testes de conectividade e resolução de nomes de domínio.
 
 ## Testes Realizados
 
