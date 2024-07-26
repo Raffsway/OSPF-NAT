@@ -4,7 +4,7 @@
 
 Este projeto utiliza o EVE-NG para emular um ambiente de rede complexo, que inclui múltiplos roteadores configurados com roteamento dinâmico OSPF (Open Shortest Path First) e NAT (Network Address Translation). O objetivo principal é garantir que a rede interna, composta por vários endereços IP, possa acessar a internet de maneira eficiente através de NAT, enquanto o OSPF gerencia o roteamento dinâmico entre os roteadores.
 
-![Diagrama da Topologia](docs/images/Topologia-de-Rede.PNG)
+!(docs/images/Topologia-de-Rede.PNG)
 ## Objetivos
 
 1. **Acesso à Internet com NAT**: Configurar o NAT para permitir que a rede 172.168.20.0/24 (Nat interno) atravez do seu endereçamento 172.42.12.1 (nat externo) acesse a internet através de um processo de tradução de endereços IP.
