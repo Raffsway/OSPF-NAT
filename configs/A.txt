@@ -1,0 +1,34 @@
+enable
+conf t
+hostname R-A
+
+int gi 0/2
+ ip address 172.42.12.2 255.255.255.252
+ no shut
+
+int gi 0/1
+ ip address 10.1.1.1 255.255.255.252
+ no shut
+
+int gi 0/3
+ ip address 10.1.2.1 255.255.255.252
+ no shut
+
+int gi 0/0
+ ip address 10.1.3.1 255.255.255.252
+ no shut
+ 
+router ospf 100
+ router-id 1.1.1.1
+ redistribute ospf 10 subnets
+ network 10.1.1.0 0.0.0.3 area 1
+ network 10.1.2.0 0.0.0.3 area 1
+ network 10.1.3.0 0.0.0.3 area 1
+ network 172.42.12.0 0.0.0.3 area 1
+
+router ospf 10
+ router-id 2.1.1.2
+ redistribute ospf 100 subnets
+ network 172.42.12.0 0.0.0.3 area 15
+ end
+wr

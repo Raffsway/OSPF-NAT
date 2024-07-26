@@ -1,0 +1,29 @@
+enable
+conf t
+hostname Client
+
+int gi 0/1
+ ip address 172.42.12.1 255.255.255.252
+ ip nat outside
+ no shut
+
+int gi 0/0
+ ip address 172.168.20.1 255.255.255.0
+ ip nat inside
+ no shut
+ exit
+
+access-list 1 permit 172.168.20.0 0.0.0.255
+ip nat inside source list 1 interface gi 0/1 overload
+
+ip dhcp pool LAN
+ network 172.168.20.0 255.255.255.0
+ default-router 172.168.20.1
+ dns-server 8.8.8.8 8.8.4.4
+
+router ospf 10
+ router-id 2.1.1.2
+ network 172.42.12.0 0.0.0.3 area 15
+ network 172.168.20.0 0.0.0.255 area 15
+ end
+wr

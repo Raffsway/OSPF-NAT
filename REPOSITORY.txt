@@ -1,0 +1,57 @@
+/NAT - OSPF
+│
+├── /docs
+│   ├── /imagens
+│   │   ├── topologia-rede.png
+│   │   ├── configuracoes-router.png
+│   ├── README.md
+│
+├── /configs
+│   ├── client-config.txt
+│   ├── r-nat-config.txt
+│   ├── r-a-config.txt
+│   ├── r-b-config.txt
+│   ├── r-c-config.txt
+│   └── r-d-config.txt
+│
+├── /data
+│   ├── /logs
+│   │   ├── log-client.txt  === X
+│   │   ├── log-r-nat.txt   === X
+│   └── /resultados
+│       ├── teste-nat.txt
+│       └── teste-ospf.txt
+|
+├── README.md
+└── LICENSE
+
+Descrição Atualizada das Pastas e Arquivos
+
+/docs: Documentação do projeto.
+    /imagens: Imagens usadas na documentação e README.
+    README.md: Documento principal com visão geral do projeto.
+    guia-instalacao.md: Instruções para configuração.
+    notas-reuniao.md: Notas de reuniões.
+
+/configs: Arquivos de configuração em formato texto para cada dispositivo de rede.
+
+/scripts: Scripts para automação e tarefas relacionadas ao projeto.
+
+/examples: Exemplos de topologias e configurações.
+
+/data: Dados de teste e logs.
+    /logs: Arquivos de log.
+    /resultados: Resultados de testes.
+
+/bin: Arquivos binários relacionados às configurações dos dispositivos. Armazena configurações exportadas ou binários de configuração, se aplicável.
+
+.gitignore: Define arquivos e pastas a serem ignorados pelo Git.
+
+README.md: Arquivo principal de documentação para o projeto.
+
+LICENSE: Licença do projeto.
+
+Dicas Adicionais
+Nomes Descritivos: Use nomes descritivos para arquivos binários e outros arquivos para facilitar a identificação do conteúdo.
+Documentação: Certifique-se de que o README.md principal inclua links para as imagens e exemplos relevantes para facilitar o acesso e a compreensão.
+Organização: Mantenha uma organização clara e consistente para facilitar a navegação e a manutenção do repositório.

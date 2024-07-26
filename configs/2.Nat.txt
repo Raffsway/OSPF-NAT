@@ -1,0 +1,27 @@
+enable
+conf t
+hostname R-NAT
+
+router ospf 100
+ router-id 5.5.5.5
+ network 10.10.10.0 0.0.0.3 area 1
+ exit
+
+access-list 10 permit 172.42.12.1 0.0.0.3
+ip nat inside source list 10 interface gi 0/1 overload
+ip route 0.0.0.0 0.0.0.0 192.168.100.1
+ip name-server 8.8.8.8 8.8.4.4
+ip domain-lookup
+
+int gi 0/0
+ ip address 10.10.10.2 255.255.255.252
+ ip nat inside
+ no shut
+
+int gi 0/1
+ ip address dhcp
+ ip nat outside
+ no shut
+
+end
+wr
