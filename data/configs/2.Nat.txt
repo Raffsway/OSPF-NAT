@@ -5,6 +5,7 @@ hostname R-NAT
 router ospf 100
  router-id 5.5.5.5
  network 10.10.10.0 0.0.0.3 area 1
+ default-information originate
  exit
 
 access-list 10 permit 172.42.12.1 0.0.0.3
